@@ -160,8 +160,9 @@ class MusicLibraryController
     songNames.sort!
     
     if(songNumber >= 1 && songNumber <= songNames.size)
-    if(Song.find_by_name(songNames[songNumber.to_i - 1]) != nil)
-      puts "Playing #{songNames[songNumber.to_i - 1]} by #{Song.find_by_name(songNames[songNumber.to_i - 1]).artist.name}"
+      if(Song.find_by_name(songNames[songNumber.to_i - 1]) != nil)
+        puts "Playing #{songNames[songNumber.to_i - 1]} by #{Song.find_by_name(songNames[songNumber.to_i - 1]).artist.name}"
+      end
     end
   end
 end
