@@ -45,7 +45,7 @@ class MusicLibraryController
     # Sort songnames
     songNames.sort!
     
-    # Iterate through sorted songs and outputs them.
+    # Iterate through sorted songs and output them.
     songNames.each_with_index{|songName, index|
       puts "#{index + 1}. #{Song.find_by_name(songName).artist.name} - #{songName} - #{Song.find_by_name(songName).genre.name}"
     }
@@ -54,5 +54,18 @@ class MusicLibraryController
   # #list_artists prints all artists in the music library in
   # a numbered list (alphabetized by artist name)
   def list_artists
+    # Get all artists names
+    artistNames = []
+    Song.all.each{|songInstance|
+      artistNames << songInstance.artist.name
+    }
+    
+    # Sort Artist names
+    artistNames.sort!
+    
+    # Iterate through artistNames and output them
+    artistNames.each_with_index {|artistName, index|
+      puts "#{index + 1}. #{artistName}"
+    }
   end
 end
