@@ -159,7 +159,7 @@ class MusicLibraryController
     # Sort songnames
     songNames.sort!
     
-    if(Song.find_by_name(songNames[songNumber.to_i - 1])) != nil)
+    if(Song.find_by_name(songNames[songNumber.to_i - 1]) != nil)
       puts "Playing #{songNames[songNumber.to_i - 1]} by #{Song.find_by_name(songNames[songNumber.to_i - 1]).artist.name}"
     end
   end
