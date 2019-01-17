@@ -90,6 +90,10 @@ class MusicLibraryController
   
   # #list_songs_by_artist prompts the user to enter an
   # artist
+  # Accepts user input
+  # Prints all songs by a particular artist in a numbered
+  # list (alphabetized by song name)
+  # Does nothing if not matching artist is found
   def list_songs_by_artist
     puts "Please enter the name of an artist:"
     artistName = gets.strip
@@ -111,5 +115,10 @@ class MusicLibraryController
     sortedNames.each_with_index{|song, index|
       puts "#{index + 1}. #{Song.find_by_name(song).name} - #{Song.find_by_name(song).genre.name}"
     }
+  end
+  
+  # #list_song_by_genre prompts the user to enter a genre
+  # 
+  def list_songs_by_genre
   end
 end
