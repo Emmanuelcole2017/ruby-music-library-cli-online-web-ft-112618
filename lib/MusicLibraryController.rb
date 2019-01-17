@@ -37,7 +37,7 @@ class MusicLibraryController
   def list_songs
     #get song names
     songNames = Song.all.collect {|songinstance|
-      songNames << songinstance.name
+      songinstance.name
     }
     songNames
   end
