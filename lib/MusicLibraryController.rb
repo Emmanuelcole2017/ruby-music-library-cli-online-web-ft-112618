@@ -148,6 +148,17 @@ class MusicLibraryController
   # alphabetized list output by #list_songs.
   def play_song
     puts "Which song number would you like to play?"
-    songName = gets.strip
+    songNumber = gets.strip
+    
+    #get song names
+    songNames = []
+    Song.all.each {|songinstance|
+      songNames << songinstance.name
+    }
+    
+    # Sort songnames
+    songNames.sort!
+    
+    puts "#{songName[songNumber -1]}"
   end
 end
