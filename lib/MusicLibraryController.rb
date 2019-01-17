@@ -40,7 +40,9 @@ class MusicLibraryController
     Song.all.each {|songinstance|
       songNames << songinstance.name
     }
-    puts songNames
+    
+    # Sort songnames
+    songNames.
   end
     
 end
