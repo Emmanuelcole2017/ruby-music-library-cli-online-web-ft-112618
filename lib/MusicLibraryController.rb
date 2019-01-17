@@ -121,7 +121,24 @@ class MusicLibraryController
   # 
   def list_songs_by_genre
     puts "Please enter the name of a genre:"
-    artistName = gets.strip
+    genreName = gets.strip
     
+    # Stores song names to be sorted later
+    songNames = []
+    
+    # Gets matching genres and stores song names that match.
+    Song.all.each{|songInstance| 
+      if (songInstance.genre.name == genreName)
+        songNames << songInstance.name
+      end
+    }
+    
+    # sort songNames
+    songNames.sort!
+    
+    # Output list of songs matching genre
+    songNames.each_with_index{|songName, index|
+      puts "#{index}. #{Song.find_by_name(songName).artist.name} - #{Song.find_by_name(songName).name}"
+    }
   end
 end
