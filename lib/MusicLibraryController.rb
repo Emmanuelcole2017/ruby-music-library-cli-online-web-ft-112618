@@ -53,6 +53,7 @@ class MusicLibraryController
   
   # #list_artists prints all artists in the music library in
   # a numbered list (alphabetized by artist name)
+  # Is not hard-coded
   def list_artists
     # Get all artists names
     artistNames = []
@@ -63,10 +64,14 @@ class MusicLibraryController
     # Sort Artist names
     artistNames.sort!
     
-    #puts artistNames
     # Iterate through artistNames and output them
     artistNames.each_with_index{|artistName, index|
       puts "#{index + 1}. #{artistName}"
     }
+  end
+  
+  # #list_genres prints all genres in the music library
+  # in a numbered list (alphabetized by artist name).
+  def list_genres
   end
 end
