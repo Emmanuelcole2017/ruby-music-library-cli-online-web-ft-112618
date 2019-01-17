@@ -36,8 +36,9 @@ class MusicLibraryController
   # numbered list (alphabetized by song name)
   def list_songs
     #get song names
-    songNames = Song.all.collect {|songinstance|
-      songinstance.name
+    songNames = []
+    Song.all.each {|songinstance|
+      songNames << songinstance.name
     }
     songNames
   end
