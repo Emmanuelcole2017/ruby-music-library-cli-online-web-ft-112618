@@ -159,6 +159,6 @@ class MusicLibraryController
     # Sort songnames
     songNames.sort!
     
-    puts "#{songNames[songNumber.to_i -1]}"
+    puts "#{songNames[songNumber.to_i]}"
   end
 end
