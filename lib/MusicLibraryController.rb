@@ -48,6 +48,7 @@ class MusicLibraryController
     songNames.each {|songName|
       puts Song.find_by_name(songName)
     }
+    puts songNames[3]
   end
     
 end
