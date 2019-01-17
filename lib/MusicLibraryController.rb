@@ -147,5 +147,6 @@ class MusicLibraryController
   # #play_song prompts the user to choose a song from the 
   # alphabetized list output by #list_songs.
   def play_song
+    puts "Which song number would you like to play?"
   end
 end
