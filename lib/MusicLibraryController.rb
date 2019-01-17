@@ -88,10 +88,25 @@ class MusicLibraryController
     }
   end
   
-  # #list_songs_by_artist prompts the user to enter an artist
+  # #list_songs_by_artist prompts the user to enter an
+  # artist
   def list_songs_by_artist
     puts "Please enter the name of an artist:"
     artistName = gets.strip
-    #puts artistName
+    
+    # Stores matching song songInstances
+    matchingSongs = []
+    
+    # Iterate through songs and store matches.
+    Song.all.each{|songInstance|
+      if songInstance.artist.name == artistName
+        matchingSongs << songInstance
+      end
+    }
+    
+    # Outputs the matching song name and genre
+    matchingSongs.each_with_index{|song, index|
+      puts "#{index + 1}. #{song.name} - #{song.genre.name}"
+    }
   end
 end
