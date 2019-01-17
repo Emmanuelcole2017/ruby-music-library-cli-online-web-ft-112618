@@ -46,7 +46,7 @@ class MusicLibraryController
     
     # Iterate through sorted songs
     songNames.each {|songName|
-      Song.find_by_name(songName)
+      puts Song.find_by_name(songName)
     }
   end
     
