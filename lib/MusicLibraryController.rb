@@ -64,7 +64,6 @@ class MusicLibraryController
     
     # Sort Artist names
     artistNames.sort!
-    puts artistNames
     
     # Iterate through artistNames and output them
     artistNames.each_with_index {|artistName, index|
