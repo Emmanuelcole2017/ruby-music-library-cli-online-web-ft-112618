@@ -63,10 +63,10 @@ class MusicLibraryController
     # Sort Artist names
     artistNames.sort!
     
-    puts artistNames
+    #puts artistNames
     # Iterate through artistNames and output them
-    #artistNames.each_with_index{|artistName, index|
-    #  puts "#{index + 1}. #{artistName}"
-    #}
+    artistNames.each_with_index{|artistName, index|
+      puts "#{index + 1}. #{artistName}"
+    }
   end
 end
