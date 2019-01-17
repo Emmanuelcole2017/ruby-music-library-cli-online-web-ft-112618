@@ -32,6 +32,14 @@ class MusicLibraryController
     end
   end
   
-  
+  # #list_songs prints all songs in the music library in a
+  # numbered list (alphabetized by song name)
+  def list_songs
+    #get song names
+    songNames = Song.all.collect {|songinstance|
+      songinstance.name
+    }
+    songNames
+  end
     
 end
