@@ -29,6 +29,10 @@ class MusicLibraryController
     input = nil
     while input != "exit"
       input = gets.strip
+      
+      if input == "list songs"
+        list_songs
+      end
     end
   end
   
