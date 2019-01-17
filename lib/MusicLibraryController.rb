@@ -56,7 +56,9 @@ class MusicLibraryController
   def list_artists
     # Get all artists names
     artistNames = []
-    puts Song.all.artists
+    Song.all.each{|songInstance|
+      artistNames << songInstance.artist.name
+    }
     
     # Sort Artist names
     artistNames.sort!
