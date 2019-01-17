@@ -120,5 +120,8 @@ class MusicLibraryController
   # #list_song_by_genre prompts the user to enter a genre
   # 
   def list_songs_by_genre
+    puts "Please enter the name of a genre:"
+    artistName = gets.strip
+    
   end
 end
