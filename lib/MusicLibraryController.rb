@@ -46,7 +46,7 @@ class MusicLibraryController
     
     # Iterate through sorted songs
     
-    puts songNames[1
+    puts songNames[1]
   end
     
 end
