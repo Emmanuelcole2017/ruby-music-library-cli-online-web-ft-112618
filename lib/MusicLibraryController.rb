@@ -56,18 +56,11 @@ class MusicLibraryController
   def list_artists
     # Get all artists names
     artistNames = []
-    Song.all.each{|songInstance|
-      if !(artistNames.include?(songInstance.artist.name))
-        artistNames << songInstance.artist.name
-      end
-    }
+    puts Song.all.artists
     
     # Sort Artist names
     artistNames.sort!
     
     # Iterate through artistNames and output them
-    artistNames.each_with_index {|artistName, index|
-      puts "#{index + 1}. #{artistName}"
-    }
   end
 end
