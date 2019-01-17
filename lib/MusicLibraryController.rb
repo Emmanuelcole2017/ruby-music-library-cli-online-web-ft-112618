@@ -159,6 +159,6 @@ class MusicLibraryController
     # Sort songnames
     songNames.sort!
     
-    puts "#{songNames[songNumber.to_i - 1]}"
+    puts "Playing #{songNames[songNumber.to_i - 1]}by #{Song.find_by_name(songNames[songNumber.to_i -1].artist.name}"
   end
 end
