@@ -80,7 +80,7 @@ class MusicLibraryController
     }
     
     # Sort the genreNames
-    genreNames.sor!
+    genreNames.sort!
     
     # Output the genreNames
     genreNames.each_with_index{|genreName, index|
