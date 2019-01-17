@@ -87,4 +87,8 @@ class MusicLibraryController
       puts "#{index + 1}. #{genreName}"
     }
   end
+  
+  # #list_songs_by_artist prompts the user to enter an artist
+  def list_songs_by_artist
+  end
 end
