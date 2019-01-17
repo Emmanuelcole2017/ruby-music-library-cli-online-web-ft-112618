@@ -94,19 +94,22 @@ class MusicLibraryController
     puts "Please enter the name of an artist:"
     artistName = gets.strip
     
-    # Stores matching song songInstances
-    matchingSongs = []
+    # Store matching songNames to be sorted
+    sortedNames = []
     
     # Iterate through songs and store matches.
     Song.all.each{|songInstance|
       if songInstance.artist.name == artistName
-        matchingSongs << songInstance
+        sortedNames << songInstance.name
       end
     }
     
+    # sort songNames
+    sortedNames.sort!
+    
     # Outputs the matching song name and genre
-    matchingSongs.each_with_index{|song, index|
-      puts "#{index + 1}. #{song.name} - #{song.genre.name}"
+    sortedNames.each_with_index{|song, index|
+      puts "#{index + 1}. #{Song.all.find_by_name(song).name} - #{Song.all.find_by_name(song).genre.name}"
     }
   end
 end
