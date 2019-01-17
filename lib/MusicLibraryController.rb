@@ -45,8 +45,8 @@ class MusicLibraryController
     songNames.sort!
     
     # Iterate through sorted songs
-    songNames.{|songName|
-      puts
+    songNames.{|songName, index|
+      puts "#{index + 1}."
   end
     
 end
