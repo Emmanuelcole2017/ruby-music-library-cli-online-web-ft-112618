@@ -138,7 +138,7 @@ class MusicLibraryController
     
     # Output list of songs matching genre
     songNames.each_with_index{|songName, index|
-      puts "#{index}. #{Song.find_by_name(songName).artist.name} - #{Song.find_by_name(songName).name}"
+      puts "#{index + 1}. #{Song.find_by_name(songName).artist.name} - #{Song.find_by_name(songName).name}"
     }
   end
 end
