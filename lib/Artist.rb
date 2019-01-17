@@ -41,7 +41,7 @@ class Artist
   def self.create(name)
     instance = Artist.new(name)
     instance.save
-    #instance
+    instance
   end
   
   # #songs returns the artist's 'songs' collection (artist
