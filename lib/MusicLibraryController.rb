@@ -42,7 +42,7 @@ class MusicLibraryController
     }
     
     # Sort songnames
-    #songNames.sort{|song1, song2| song2 <=> song1}
+    songNames.sort!
     
     # Iterate through sorted songs
     
