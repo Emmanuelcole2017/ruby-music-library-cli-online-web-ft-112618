@@ -57,7 +57,7 @@ class MusicLibraryController
     # Get all artists names
     artistNames = []
     Song.all.each{|songInstance|
-      if !(artistNames.inlude?(songInstance.artist.name))
+      if !(artistNames.include?(songInstance.artist.name))
         artistNames << songInstance.artist.name
       end
     }
